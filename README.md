@@ -3,11 +3,11 @@
 ### Data Set Summary & Exploration
 #### 1. Provide a basic summary of the data set.
 I used python to calculate summary statistics of the traffic sign data set:
-..* Number of training examples = 34799
-..* Number of validation examples =  4410
-..* Number of testing examples = 12630
-..* Image data shape = (32, 32, 3)
-..* Number of classes = 43
+⋅⋅* Number of training examples = 34799
+⋅⋅* Number of validation examples =  4410
+⋅⋅* Number of testing examples = 12630
+⋅⋅* Image data shape = (32, 32, 3)
+⋅⋅* Number of classes = 43
 
 #### 2. Include an exploratory visualization of the dataset.
 The following figures show samples taken from the dataset and a chart showing the distribution of the dataset.
@@ -94,7 +94,7 @@ Here are five German traffic signs that I found on the web:
 Predictions on the test set...
 
 ##### Probability Distribution
-![Probability Distribution](/images/prob_dist.png)
+![Probability Distribution](/images/prop_dist.png)
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction.
 ##### Image 1
