@@ -41,4 +41,21 @@ normalise before and after
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
-	
+
+![Stop](/images/1.jpg)
+![Speed 30](/images/2.jpg)
+![Construction](/images/3.jpg)
+![Yield](/images/4.jpg)
+![Speed 60](/images/5.jpg)
+
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set.
+| Image         | Prediciton   | Probability |
+| ------------- | ------------ | ----------- |
+| Stop          | Construction |  0.20       |
+| Speed 30      | Construction |  0.20       |
+| Construction  | Construction |  0.20       |
+| Yield         | Construction |  0.20       |
+| Speed 60      | Construction |  0.20       |
+
+
+Probability and distribution images for each classification
