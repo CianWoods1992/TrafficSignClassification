@@ -98,40 +98,40 @@ Predictions on the test set...
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction.
 ##### Image 1
-| Probability | Prediction   |
-| ----------- | -----------  |
-| .08         | Construction |
-| .06         | Stop Sign    |
-| .02         | Yield        |
+| Probability | Prediction    |
+| ----------- | ------------- |
+| .39         | No Passing    |
+| .09         | Keep Left     |
+| .07         | Slippery Road |
 
 ##### Image 2
 
 | Probability | Prediction   |
-| ----------- | -----------  |
-| .08         | Construction |
-| .06         | Stop Sign    |
-| .02         | Yield        |
+| ----------- | ------------ |
+| .88         | Speed 30     |
+| .04         | Speed 50     |
+| .02         | Speed 80     |
 
 ##### Image 3
 
 | Probability | Prediction   |
-| ----------- | -----------  |
-| .08         | Construction |
-| .06         | Stop Sign    |
-| .02         | Yield        |
+| ----------- | ------------ |
+| .71         | Bumpy Road   |
+| .11         | Pedestrians  |
+| .02         | Speed 120    |
 
 ##### Image 4
 
-| Probability | Prediction   |
-| ----------- | -----------  |
-| .08         | Construction |
-| .06         | Stop Sign    |
-| .02         | Yield        |
+| Probability | Prediction      |
+| ----------- | --------------- |
+| .67         | Yield           |
+| .03         | Speed 50        |
+| .03         | Traffic Signals |
 
 ##### Image 5
 
-| Probability | Prediction   |
-| ----------- | -----------  |
-| .08         | Construction |
-| .06         | Stop Sign    |
-| .02         | Yield        |
+| Probability | Prediction      |
+| ----------- | --------------- |
+| .48         | Speed 60        |
+| .17         | Speed 80        |
+| .12         | End of Speed 80 |
