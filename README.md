@@ -13,6 +13,24 @@ normalise before and after
 	Consider including a diagram and/or table describing the final model.
 	
 	Diagram of final network here
+
+| Layer               | Description   |               
+| ------------------- | ------------- |
+| Input               | 32X32X1 Image |
+| Flatten             |               |
+| Spatial Transform   |               |
+| Convolution         |               |
+| Max Pool            |               |
+| Batch Normalisation |               |
+| Convolution         |               |
+| Max Pool            |               |
+| Batch Normalisation |               |
+| Flatten             |               |
+| Fully Connected     |               |
+| Dropout             |               |
+| Fully Connected     |               |
+| Dropout             |               |
+| Output              |               |
   
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
@@ -59,3 +77,14 @@ Here are five German traffic signs that I found on the web:
 
 
 Probability and distribution images for each classification
+
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction.
+##### Image 1
+
+##### Image 2
+
+##### Image 3
+
+##### Image 4
+
+##### Image 5
