@@ -30,23 +30,23 @@ normalise before and after
 	
 	Diagram of final network here
 
-| Layer               | Description   |               
-| ------------------- | ------------- |
-| Input               | 32X32X1 Image |
-| Flatten             |               |
-| Spatial Transform   |               |
-| Convolution         |               |
-| Max Pool            |               |
-| Batch Normalisation |               |
-| Convolution         |               |
-| Max Pool            |               |
-| Batch Normalisation |               |
-| Flatten             |               |
-| Fully Connected     |               |
-| Dropout             |               |
-| Fully Connected     |               |
-| Dropout             |               |
-| Output              |               |
+| Layer               | Description                                 |               
+| ------------------- | ------------------------------------------- |
+| Input               | 32X32X1 Grayscale Image                     |
+| Flatten             |                                             |
+| Spatial Transform   |                                             |
+| Convolution         | 1x1 stride, valid padding, outputs 28x28x6  |
+| Max Pool            | 2x2 stride, outputs 14x14x6                 |
+| Batch Normalisation |                                             |
+| Convolution         | 2x2 stride, valid padding, outputs 10x10x32 |
+| Max Pool            | 2x2 stride, outputs 5x5x32                  |
+| Batch Normalisation |                                             |
+| Flatten             | Output 400                                  |
+| Fully Connected     | Output 120                                  |
+| Dropout             | 0.5 Keep Probability                        |
+| Fully Connected     | Output 84                                   |
+| Dropout             | 0.5 Keep Probability                        |
+| Output              | 43 Classes                                  |
   
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
@@ -59,6 +59,8 @@ The initial architecture used was LeNet, mainly as this was the architecture des
 Next I started modifying the LeNet architecture, first adding a dropout layer after the first fully connected layer, I then added a second dropout layer after the second fully connected layer to see if it would add any improvement. The purpose of the dropout layers were to prevent overfitting while training. 
 
 I then added batch normalisation between convolutional layers, the purpose of this is to normalise the data of each batch giving it a zero mean, this increased the overall accuracy of the network.
+
+I then increased the number of nodes in the fully connected layers, hoping for the network to extract more features from the convolution layers. CW FROM WHAT TO WHAT...?
 
 Finally I added a spatial transform at the beginning of the network, the purpose of this is to transform the input images as they enter the network, this allows the network to find features easier as all of the images are transformed to appear as if they are perpendicular to the camera that took them.
 		
