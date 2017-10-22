@@ -34,7 +34,7 @@ normalise before and after
   
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-	Maybe experiment with this a bit before submitting anything
+In training my model I experimented with the optimiser, batch size and number of epochs. Initially I trained the network using 10 EPOCHS, after adding dropout to my architecture I decided to increase the number of EPOCHS to 30 and 50 in different scenarios to see if the reduction in over fitting for a longer training time could improve the accuracy, this however only increased accuracy on the validation set by 0.08%. The insignificant reduction was not justified in the extra time required to train the network as the laptop running the training had no dedicated GPU. I began training with the Adagrad optimiser, I noticed however that the change in accuracy of validation was in very small increments. I decided to train on the Adam optimiser for comparison. I noticed that the Adam optimiser was converging to its max accuracy in far fewer EPOCHS than Adagrad (~15: Adam, ~40: Adagrad). I then doubled batch size from 128 to 256, this increased accuracy very slightly (~0.05%). To finish I experimented with 30 EPOCHS with the Adam optimiser and a batch size of 128 and for my final training I increased EPOCHS to 100. However, I feel this may have caused slight overfitting on my training set as the validation accuracy and test accuracy reduced by ~4%.
 	
 #### 4. Describe approach taken...
 
@@ -48,11 +48,11 @@ normalise before and after
 	7. Added L2 Regularisation
 		tried sobel... why?
 		
-	My final model results were:
+My final model results were:
 
-	- training set accuracy of ?
-	- validation set accuracy of ?
-	- test set accuracy of ?
+	- training set accuracy of 0.994
+	- validation set accuracy of 0.973
+	- test set accuracy of 0.954
 	
 ### Test a Model on New Images
 
@@ -80,11 +80,40 @@ Probability and distribution images for each classification
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction.
 ##### Image 1
+| Probability | Prediction   |
+| ----------- | -----------  |
+| .08         | Construction |
+| .06         | Stop Sign    |
+| .02         | Yield        |
 
 ##### Image 2
 
+| Probability | Prediction   |
+| ----------- | -----------  |
+| .08         | Construction |
+| .06         | Stop Sign    |
+| .02         | Yield        |
+
 ##### Image 3
+
+| Probability | Prediction   |
+| ----------- | -----------  |
+| .08         | Construction |
+| .06         | Stop Sign    |
+| .02         | Yield        |
 
 ##### Image 4
 
+| Probability | Prediction   |
+| ----------- | -----------  |
+| .08         | Construction |
+| .06         | Stop Sign    |
+| .02         | Yield        |
+
 ##### Image 5
+
+| Probability | Prediction   |
+| ----------- | -----------  |
+| .08         | Construction |
+| .06         | Stop Sign    |
+| .02         | Yield        |
