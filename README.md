@@ -3,11 +3,11 @@
 ### Data Set Summary & Exploration
 #### 1. Provide a basic summary of the data set.
 I used python to calculate summary statistics of the traffic sign data set:
-⋅⋅* Number of training examples = 34799
-⋅⋅* Number of validation examples =  4410
-⋅⋅* Number of testing examples = 12630
-⋅⋅* Image data shape = (32, 32, 3)
-⋅⋅* Number of classes = 43
+* Number of training examples = 34799
+* Number of validation examples =  4410
+* Number of testing examples = 12630
+* Image data shape = (32, 32, 3)
+* Number of classes = 43
 
 #### 2. Include an exploratory visualization of the dataset.
 The following figures show samples taken from the dataset and a chart showing the distribution of the dataset.
@@ -54,27 +54,26 @@ In training my model I experimented with the optimiser, batch size and number of
 	
 #### 4. Describe approach taken...
 
-	1. LeNet (3 channel, no preprocessing, 10E) - 89.4%
-	2. LeNet (3 channel, normalisation, 10E) - 87.3%
-	3. LeNet (1 channel, normalisation, 10E) - 86.7 %
-	4. LeNet with Dropout between FC1 and FC2 (1 channel, normalise hist) - 88.7%
-	5. LeNet with Dropout after FC1 and after FC2 (1 channel, normalise hist) - 93.8%
-	5. Added batch normalisation - 96.9%
-	6. Added spatial transform - 97.2%
-	7. Added L2 Regularisation
-		tried sobel... why?
+The initial architecture used was LeNet, mainly as this was the architecture described in the learning material and from initial training it provided a baseline accuracy of 89.4%. Before modifying the neural network architecture I decided to preprocess the data to view the impact of preprocessing on a network that I already had a baseline accuracy on. The preprocessing steps I added were as follows, data normalisation, converting image from 3 channel to 1 channel and finally equalising the histogram of the image. The variance in light sources among images makes it more difficult for a network to pic out important features as the same colors could give different RGB values under different lighting conditions. By converting the images to grayscale and equalising the histogram, the variance in values of pixels under different lighting conditions is minimised making it easier for the network to classify similar features.  
+
+Next I started modifying the LeNet architecture, first adding a dropout layer after the first fully connected layer, I then added a second dropout layer after the second fully connected layer to see if it would add any improvement. The purpose of the dropout layers were to prevent overfitting while training. 
+
+I then added batch normalisation between convolutional layers, the purpose of this is to normalise the data of each batch giving it a zero mean, this increased the overall accuracy of the network.
+
+Finally I added a spatial transform at the beginning of the network, the purpose of this is to transform the input images as they enter the network, this allows the network to find features easier as all of the images are transformed to appear as if they are perpendicular to the camera that took them.
 		
 My final model results were:
 
-	- training set accuracy of 0.994
-	- validation set accuracy of 0.973
-	- test set accuracy of 0.954
+* Training set accuracy of 0.994
+* Validation set accuracy of 0.973
+* Test set accuracy of 0.954
 	
 ### Test a Model on New Images
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
+CW DISCUSS WHAT IS DIFFICULT TO CLASSIFY ON THESE...
 
 ![Stop](/images/1.jpg)
 ![Speed 30](/images/2.jpg)
