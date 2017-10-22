@@ -69,14 +69,23 @@ Here are five German traffic signs that I found on the web:
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set.
 | Image         | Prediciton   | Probability |
 | ------------- | ------------ | ----------- |
-| Stop          | Construction |  0.20       |
-| Speed 30      | Construction |  0.20       |
-| Construction  | Construction |  0.20       |
-| Yield         | Construction |  0.20       |
-| Speed 60      | Construction |  0.20       |
+| Stop          | No Passing   |  0.39       |
+| Speed 30      | Speed 30     |  0.88       |
+| Construction  | Bumpy Road   |  0.71       |
+| Yield         | Yield        |  0.67       |
+| Speed 60      | Speed 60     |  0.48       |
 
+Predictions on the test set...
 
-Probability and distribution images for each classification
+##### Image 1 Probability Distribution
+
+##### Image 2 Probability Distribution
+
+##### Image 3 Probability Distribution
+
+##### Image 4 Probability Distribution
+
+##### Image 5 Probability Distribution
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction.
 ##### Image 1
