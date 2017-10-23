@@ -24,7 +24,7 @@ equaliseHist before and after
 reshape before and after
 
 
-Finally the dataset was normalised.
+Finally the dataset was normalised. CW WHY??
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) 
 	Consider including a diagram and/or table describing the final model.
@@ -61,7 +61,7 @@ Next I started modifying the LeNet architecture, first adding a dropout layer af
 
 I then added batch normalisation between convolutional layers, the purpose of this is to normalise the data of each batch giving it a zero mean, this increased the overall accuracy of the network.
 
-I then increased the number of nodes in the fully connected layers, hoping for the network to extract more features from the convolution layers. CW FROM WHAT TO WHAT...?
+I then increased the number of nodes in the fully connected layers, hoping for the network to extract more features from the convolution layers. This had little effect.
 
 Finally I added a spatial transform at the beginning of the network, the purpose of this is to transform the input images as they enter the network, this allows the network to find features easier as all of the images are transformed to appear as if they are perpendicular to the camera that took them.
 		
