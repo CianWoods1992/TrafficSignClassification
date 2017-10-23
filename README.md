@@ -23,7 +23,8 @@ equaliseHist before and after
 
 reshape before and after
 
-normalise before and after
+
+Finally the dataset was normalised.
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) 
 	Consider including a diagram and/or table describing the final model.
