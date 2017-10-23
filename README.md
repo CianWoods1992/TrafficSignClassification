@@ -17,11 +17,12 @@ The following figures show samples taken from the dataset and a chart showing th
 
 ### Design and Test a Model Architecture
 #### 1. Desribe how you preprocessed the data
-Grayscale before and after
+Before modifying the neural network architecture I decided to preprocess the data to view the impact of preprocessing on a network that I already had a baseline accuracy on. The preprocessing steps I added were as follows, data normalisation, converting image from 3 channel to 1 channel and finally equalising the histogram of the image.
 
-equaliseHist before and after
-
-reshape before and after
+Firstly I decided to convert the image to grayscale which eliminates......
+![Preproc Grey](/images/preproc_orig.png)
+![Preproc Grey](/images/preproc_grey.png)
+![Preproc Hist](/images/preproc_hist.png)
 
 
 Finally the dataset was normalised. CW WHY??
