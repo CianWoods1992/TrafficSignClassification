@@ -19,13 +19,18 @@ The following figures show samples taken from the dataset and a chart showing th
 #### 1. Desribe how you preprocessed the data
 Before modifying the neural network architecture I decided to preprocess the data to view the impact of preprocessing on a network that I already had a baseline accuracy on. The preprocessing steps I added were as follows, data normalisation, converting image from 3 channel to 1 channel and finally equalising the histogram of the image.
 
-Firstly I decided to convert the image to grayscale which eliminates......
+
 ![Preproc Grey](/images/preproc_orig.png)
+
+Firstly I decided to convert the image to grayscale which eliminates different light intensities of the same color to be classified differently.
+
 ![Preproc Grey](/images/preproc_grey.png)
+
+Next I equalized the histogram of the image. Histogram equalization improved the contrast of the image and can highlight more features that can be classified on.
+
 ![Preproc Hist](/images/preproc_hist.png)
 
-
-Finally the dataset was normalised. CW WHY??
+Finally the dataset was normalised for input into the network.
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) 
 	Consider including a diagram and/or table describing the final model.
