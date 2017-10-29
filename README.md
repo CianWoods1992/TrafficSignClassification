@@ -73,16 +73,14 @@ Finally I added a spatial transform at the beginning of the network, the purpose
 		
 My final model results were:
 
-* Training set accuracy of 0.994
-* Validation set accuracy of 0.973
-* Test set accuracy of 0.954
+* Training set accuracy of 0.987
+* Validation set accuracy of 0.968
+* Test set accuracy of 0.941
 	
 ### Test a Model on New Images
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
-
+#### 1. Choose five German traffic signs found on the web and provide them in the report.
 Here are five German traffic signs that I found on the web:
-CW DISCUSS WHAT IS DIFFICULT TO CLASSIFY ON THESE...
 
 ![Stop](/images/1.jpg)
 ![Speed 30](/images/2.jpg)
@@ -91,15 +89,13 @@ CW DISCUSS WHAT IS DIFFICULT TO CLASSIFY ON THESE...
 ![Speed 60](/images/5.jpg)
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set.
-| Image         | Prediciton   | Probability |
-| ------------- | ------------ | ----------- |
-| Stop          | No Passing   |  0.39       |
-| Speed 30      | Speed 30     |  0.88       |
-| Construction  | Bumpy Road   |  0.71       |
-| Yield         | Yield        |  0.67       |
-| Speed 60      | Speed 60     |  0.48       |
-
-Predictions on the test set...
+| Image         | Prediciton    | Probability |
+| ------------- | ------------- | ----------- |
+| Stop          | Priority Road |  0.17       |
+| Speed 30      | Speed 30      |  0.91       |
+| Construction  | Bumpy Road    |  0.46       |
+| Yield         | Yield         |  0.24       |
+| Speed 60      | Speed 60      |  1.00       |
 
 ##### Probability Distribution
 ![Probability Distribution](/images/prop_dist.png)
@@ -108,38 +104,38 @@ Predictions on the test set...
 ##### Image 1
 | Probability | Prediction    |
 | ----------- | ------------- |
-| .39         | No Passing    |
-| .09         | Keep Left     |
-| .07         | Slippery Road |
+| .17         | No Passing    |
+| .06         | Speed 80      |
+| .06         | Yield         |
 
 ##### Image 2
 
-| Probability | Prediction   |
-| ----------- | ------------ |
-| .88         | Speed 30     |
-| .04         | Speed 50     |
-| .02         | Speed 80     |
+| Probability | Prediction          |
+| ----------- | ------------------- |
+| .91         | Speed 30            |
+| .04         | End of Speed 80     |
+| .01         | Speed 20            |
 
 ##### Image 3
 
 | Probability | Prediction   |
 | ----------- | ------------ |
-| .71         | Bumpy Road   |
-| .11         | Pedestrians  |
-| .02         | Speed 120    |
+| .46         | Bumpy Road   |
+| .28         | Speed 120    |
+| .06         | Keep Right   |
 
 ##### Image 4
 
 | Probability | Prediction      |
 | ----------- | --------------- |
-| .67         | Yield           |
-| .03         | Speed 50        |
-| .03         | Traffic Signals |
+| .24         | Yield           |
+| .12         | Speed 50        |
+| .06         | Speed 80        |
 
 ##### Image 5
 
 | Probability | Prediction      |
 | ----------- | --------------- |
-| .48         | Speed 60        |
-| .17         | Speed 80        |
-| .12         | End of Speed 80 |
+| 1.0         | Speed 60        |
+| .00         | Speed 80        |
+| .00         | Speed 50        |
