@@ -33,9 +33,8 @@ Next I equalized the histogram of the image. Histogram equalization improved the
 Finally the dataset was normalised for input into the network.
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) 
-	Consider including a diagram and/or table describing the final model.
-	
-	Diagram of final network here
+
+![Arch](/images/ArchDrawing.png)
 
 | Layer               | Description                                 |               
 | ------------------- | ------------------------------------------- |
